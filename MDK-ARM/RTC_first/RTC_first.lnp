@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp.sp
+"rtc_first\startup_stm32f429xx.o"
+"rtc_first\main.o"
+"rtc_first\stm32f4xx_it.o"
+"rtc_first\stm32f4xx_hal_msp.o"
+"rtc_first\stm32f4xx_hal_rtc.o"
+"rtc_first\stm32f4xx_hal_rtc_ex.o"
+"rtc_first\stm32f4xx_hal_rcc.o"
+"rtc_first\stm32f4xx_hal_rcc_ex.o"
+"rtc_first\stm32f4xx_hal_flash.o"
+"rtc_first\stm32f4xx_hal_flash_ex.o"
+"rtc_first\stm32f4xx_hal_flash_ramfunc.o"
+"rtc_first\stm32f4xx_hal_gpio.o"
+"rtc_first\stm32f4xx_hal_dma_ex.o"
+"rtc_first\stm32f4xx_hal_dma.o"
+"rtc_first\stm32f4xx_hal_pwr.o"
+"rtc_first\stm32f4xx_hal_pwr_ex.o"
+"rtc_first\stm32f4xx_hal_cortex.o"
+"rtc_first\stm32f4xx_hal.o"
+"rtc_first\stm32f4xx_hal_exti.o"
+"rtc_first\stm32f4xx_hal_tim.o"
+"rtc_first\stm32f4xx_hal_tim_ex.o"
+"rtc_first\stm32f4xx_hal_uart.o"
+"rtc_first\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "RTC_first\RTC_first.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "RTC_first.map" -o RTC_first\RTC_first.axf
