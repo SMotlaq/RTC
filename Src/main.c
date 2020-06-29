@@ -49,7 +49,11 @@ RTC_HandleTypeDef hrtc;
 UART_HandleTypeDef huart4;
 
 /* USER CODE BEGIN PV */
-
+RTC_TimeTypeDef time_struct		 ;
+uint8_t 				second 			= 0;
+uint8_t 				minute 			= 0;
+uint8_t 				hour   			= 0;
+int     				debugVar 		= 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -97,7 +101,7 @@ int main(void)
   MX_RTC_Init();
   MX_UART4_Init();
   /* USER CODE BEGIN 2 */
-
+	
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -107,6 +111,12 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+		HAL_RTC_GetTime(&hrtc, &time_struct, RTC_FORMAT_BIN);
+		second = time_struct.Seconds;
+		minute = time_struct.Minutes;
+		hour   = time_struct.Hours  ;
+		debugVar++;
+		HAL_Delay(500);
   }
   /* USER CODE END 3 */
 }
